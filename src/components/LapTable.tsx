@@ -21,11 +21,13 @@ const LapsTable: React.FC<LapsTableProps> = ({ laps, timer }) => {
     <ScrollView>
       {laps.map((lap, index) => (
         <Lap
-          key={laps.length - index}
+         
           number={laps.length - index}
+          key={laps.length - index}
           interval={index === 0 ? timer + lap : lap}
           fastest={lap === min}
           slowest={lap === max}
+     
         />
       ))}
     </ScrollView>
